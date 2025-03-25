@@ -47,3 +47,4 @@ jobs:
           sed -i 's|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/hello-spring-k8s:latest|' k8s/deployment.yaml
 
 
+

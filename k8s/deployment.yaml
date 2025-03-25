@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello-spring-k8s
+  name: hello-spring-k8s
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-spring-k8s
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hello-spring-k8s
+    spec:
+      containers:
+        - image: spring-k8s/hello-spring-k8s
+          imagePullPolicy: Never
+          name: hello-spring-k8s
+          resources: {}
+status: {}
